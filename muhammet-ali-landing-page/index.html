@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammet Ali | Computer Programming Student</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="theme-toggle">
+        <span>🌙</span>
+
+        <label>
+            <input type="checkbox" id="theme-switch">
+            <span class="toggle-slider"></span>
+        </label>
+
+        <span>☀️</span>
+    </div>
+
+    <header>
+        <h1>MUHAMMET ALİ</h1>
+        <p>Computer Programming Student</p>
+        <p class="hero-description">Web development & software enthusiast</p>
+
+        <a href="projeler.html">Projelerimi Gör</a>
+    </header>
+
+    <section class="scroll-section">
+        <h2>HAKKIMDA</h2>
+
+        <p>Pamukkale Üniversitesi</p>
+        <p>Çivril Atasay Kamer Meslek Yüksekokulu</p>
+        <p>Bilgisayar Programcılığı</p>
+
+        <p>
+            Şu anda Efor.ai'de staj yapıyorum ve
+            yazılım geliştirme alanında kendimi geliştiriyorum.
+        </p>
+
+        <p>
+            Yazılım geliştirmenin yanında, boş zamanlarımda calisthenics ile ilgileniyorum.
+        </p>
+    </section>
+
+    <section class="scroll-section">
+        <h2>TEKNOLOJİLER</h2>
+
+        <p class="tech-list">HTML · CSS · JavaScript</p>
+        <p class="tech-list">Node.js · Express.js</p>
+        <p class="tech-list">Axios · XML · xml2js · SQLite</p>
+    </section>
+
+    <section id="projeler" class="scroll-section">
+        <h2>PROJELER</h2>
+
+        <div class="project-card">
+            <h3>Merkez Bankası Döviz Kurları Web API</h3>
+            <p>Merkez Bankası verilerini alıp döviz kurlarını sunan Web API projesi.</p>
+            
+            <button class="details-button" onclick="toggleDetails(this)">
+                Detaylar
+            </button>
+
+            <div class="project-details">
+                <h4>Özellikler</h4>
+                <p>CRUD · Cache (Önbellekleme)</p>
+
+                <h4>Teknolojiler</h4>
+                <p>Node.js · Express · Axios · XML · xml2js · @vercel/ncc</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Kişisel Landing Page</h3>
+            <p>Kişisel bilgilerimi, kullandığım teknolojileri ve projelerimi tanıtan web sitesi.</p>
+
+            <button class="details-button" onclick="toggleDetails(this)">
+                Detaylar
+            </button>
+
+            <div class="project-details">
+                <h4>Özellikler</h4>
+                <p>Responsive Tasarım · Scroll Animasyonları · Hover Efektleri</p>
+
+                <h4>Teknolojiler</h4>
+                <p>HTML · CSS · JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim" class="scroll-section">
+        <h2>İLETİŞİM</h2>
+
+        <p>
+            E-posta:
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aydemirmuhammetali5@gmail.com" target="_blank">
+                aydemirmuhammetali5@gmail.com
+            </a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/muhammetalia124-ops" target="_blank">
+                muhammetalia124-ops
+            </a>
+        </p>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
