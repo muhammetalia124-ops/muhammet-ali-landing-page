@@ -330,3 +330,8 @@ body.light-theme .project-card:hover {
 .details-button:hover {
     text-decoration: none !important;
 }
+
+body {
+  user-select: none;
+  cursor: default;
+}
