@@ -326,3 +326,7 @@ body.light-theme .project-card:hover {
 .tech-list:hover {
     background-color: #6366f1;
 }
+
+.details-button:hover {
+    text-decoration: none !important;
+}
