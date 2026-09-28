@@ -18,7 +18,10 @@ window.addEventListener("scroll", showSections);
 showSections();
 
 function toggleDetails(button) {
-    const details = button.nextElementSibling;
+    const card = button.closest(".project-card");
+    const details = card ? card.querySelector(".project-details") : button.nextElementSibling;
+
+    if (!details) return;
 
     if (details.classList.contains("show")) {
         details.classList.remove("show");
