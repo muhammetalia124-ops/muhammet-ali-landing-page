@@ -24,23 +24,28 @@ function toggleDetails(button) {
     if (!details) return;
 
     if (details.classList.contains("show")) {
+        const mevcutScroll = window.scrollY;
+        
+        document.body.style.paddingBottom = "100vh"; 
+
         details.classList.remove("show");
         button.textContent = "Detaylar";
+
+        window.scrollTo(0, mevcutScroll);
+
+        const temizle = () => {
+            document.body.style.paddingBottom = "";
+            window.removeEventListener("scroll", temizle);
+            window.removeEventListener("mousemove", temizle);
+        };
+        setTimeout(() => {
+            window.addEventListener("scroll", temizle);
+            window.addEventListener("mousemove", temizle);
+        }, 50);
+
     } else {
         details.classList.add("show");
         button.textContent = "Detayları Gizle";
-    }
-}
-
-const themeSwitch = document.getElementById("theme-switch");
-
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "light") {
-    document.body.classList.add("light-theme");
-
-    if (themeSwitch) {
-        themeSwitch.checked = true;
     }
 }
 
