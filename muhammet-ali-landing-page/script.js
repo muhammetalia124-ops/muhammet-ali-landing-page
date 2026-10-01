@@ -1,4 +1,5 @@
 const sections = document.querySelectorAll(".scroll-section");
+const themeSwitch = document.getElementById("theme-switch");
 
 function showSections() {
     sections.forEach(section => {
@@ -14,7 +15,6 @@ function showSections() {
 }
 
 window.addEventListener("scroll", showSections);
-
 showSections();
 
 function toggleDetails(button) {
@@ -25,8 +25,8 @@ function toggleDetails(button) {
 
     if (details.classList.contains("show")) {
         const mevcutScroll = window.scrollY;
-        
-        document.body.style.paddingBottom = "100vh"; 
+
+        document.body.style.paddingBottom = "100vh";
 
         details.classList.remove("show");
         button.textContent = "Detaylar";
@@ -38,15 +38,30 @@ function toggleDetails(button) {
             window.removeEventListener("scroll", temizle);
             window.removeEventListener("mousemove", temizle);
         };
+
         setTimeout(() => {
             window.addEventListener("scroll", temizle);
             window.addEventListener("mousemove", temizle);
         }, 50);
-
     } else {
         details.classList.add("show");
         button.textContent = "Detayları Gizle";
     }
+}
+
+function applyTheme(theme) {
+    if (theme === "light") {
+        document.body.classList.add("light-theme");
+        if (themeSwitch) themeSwitch.checked = true;
+    } else {
+        document.body.classList.remove("light-theme");
+        if (themeSwitch) themeSwitch.checked = false;
+    }
+}
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+    applyTheme(savedTheme);
 }
 
 if (themeSwitch) {
